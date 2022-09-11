@@ -1,15 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Prop : MonoBehaviour
 {
 	[SerializeField] private string propName;
-	[TextArea(3, 10)] [SerializeField] private string description;
+	[SerializeField] [TextArea(3, 10)] private string description;
+
+	[SerializeField] public List<Question> questions;
 
 	private PropDescManager _propDescManager;
 
 	private void Start()
 	{
 		_propDescManager = FindObjectOfType<PropDescManager>();
+
+		foreach (Question question in questions) question.Init(this);
 	}
 
 	public void Grab()
