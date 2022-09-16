@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DialogueUI : MonoBehaviour
 {
-	[SerializeField] private GameObject dialogueBox;
+	[SerializeField] private GameObject dialoguePanel;
+	private RectTransform _dialoguePanelRectTransform;
 	[SerializeField] private TextMeshProUGUI textLabel;
 	[SerializeField] private DialogueObject testDialogue;
 	private ResponseHandler _responseHandler;
@@ -15,13 +16,14 @@ public class DialogueUI : MonoBehaviour
 	{
 		_typewriterEffect = GetComponent<TypewriterEffect>();
 		_responseHandler = GetComponent<ResponseHandler>();
+		_dialoguePanelRectTransform = dialoguePanel.GetComponent<RectTransform>();
 		CloseDialogueBox();
 		ShowDialogue(testDialogue);
 	}
 
 	public void ShowDialogue(DialogueObject dialogueObject)
 	{
-		dialogueBox.SetActive(true);
+		dialoguePanel.SetActive(true);
 		StartCoroutine(StepThroughDialogue(dialogueObject));
 	}
 
@@ -38,14 +40,26 @@ public class DialogueUI : MonoBehaviour
 		}
 
 		if (dialogueObject.HasResponses)
+		{
+			SetPanelHeight(dialogueObject.Responses.Length <= 2 ? 0.75f : 1.0f);
+
 			_responseHandler.ShowResponses(dialogueObject.Responses);
+		}
 		else
+		{
 			CloseDialogueBox();
+		}
+	}
+
+	public void SetPanelHeight(float h)
+	{
+		RectTransform rt = _dialoguePanelRectTransform;
+		rt.sizeDelta = new Vector2(rt.sizeDelta.x, h);
 	}
 
 	private void CloseDialogueBox()
 	{
-		dialogueBox.SetActive(false);
+		dialoguePanel.SetActive(false);
 		textLabel.text = "";
 	}
 }

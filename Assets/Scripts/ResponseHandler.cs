@@ -46,6 +46,7 @@ public class ResponseHandler : MonoBehaviour
 
 	private void HideButtons()
 	{
+		_dialogueUI.SetPanelHeight(0.5f);
 		foreach (Button responseButton in _responseButtons) responseButton.gameObject.SetActive(false);
 	}
 }
