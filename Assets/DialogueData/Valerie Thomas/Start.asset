@@ -10,19 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: test
+  m_Name: Start
   m_EditorClassIdentifier: 
   dialogue:
-  - 'helo
-
-    yee'
-  - 'oolong
-
-    tea
-
-    hehe that rhymes :)'
+  - Welcome, you want some history facts?
+  - Ofcourse you do!
   responses:
-  - responseText: Yes
-    dialogueObject: {fileID: 11400000, guid: 1401a0ff5cf483a488f869c414687366, type: 2}
-  - responseText: No
-    dialogueObject: {fileID: 11400000, guid: d8ff4efd9b1bcbc48925f62e14f2867d, type: 2}
+  - responseText: Yay! History facts!
+    dialogueObject: {fileID: 11400000, guid: d1b0a4ebe97858547ba9c2468e2c8138, type: 2}
+  - responseText: Who gave Dennis this freedom?
+    dialogueObject: {fileID: 11400000, guid: 798122717d04ec74ca981447a7a26a70, type: 2}

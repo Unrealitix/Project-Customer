@@ -7,7 +7,7 @@ public class DialogueUI : MonoBehaviour
 	[SerializeField] private GameObject dialoguePanel;
 	private RectTransform _dialoguePanelRectTransform;
 	[SerializeField] private TextMeshProUGUI textLabel;
-	[SerializeField] private DialogueObject testDialogue;
+	[SerializeField] private DialogueObject startDialogue;
 	private ResponseHandler _responseHandler;
 
 	private TypewriterEffect _typewriterEffect;
@@ -18,7 +18,7 @@ public class DialogueUI : MonoBehaviour
 		_responseHandler = GetComponent<ResponseHandler>();
 		_dialoguePanelRectTransform = dialoguePanel.GetComponent<RectTransform>();
 		CloseDialogueBox();
-		ShowDialogue(testDialogue);
+		ShowDialogue(startDialogue);
 	}
 
 	public void ShowDialogue(DialogueObject dialogueObject)

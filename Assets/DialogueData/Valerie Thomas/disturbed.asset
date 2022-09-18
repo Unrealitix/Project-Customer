@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: Yes
+  m_Name: disturbed
   m_EditorClassIdentifier: 
   dialogue:
-  - You said yes! :D
-  responses: []
+  - Yes, very disturbing.
+  responses:
+  - responseText: Back to start
+    dialogueObject: {fileID: 11400000, guid: 321b86c169c32834ea6def99896561ff, type: 2}
