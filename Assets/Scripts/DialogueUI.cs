@@ -8,9 +8,13 @@ public class DialogueUI : MonoBehaviour
 	private RectTransform _dialoguePanelRectTransform;
 	[SerializeField] private TextMeshProUGUI textLabel;
 	[SerializeField] private DialogueObject startDialogue;
+	[SerializeField] private GameObject nextHintSprite;
 	private ResponseHandler _responseHandler;
 
 	private TypewriterEffect _typewriterEffect;
+
+	private bool _finishedTyping;
+	private bool _nextDialogueAllowed;
 
 	private void Start()
 	{
@@ -35,8 +39,13 @@ public class DialogueUI : MonoBehaviour
 			yield return _typewriterEffect.Run(dialogue, textLabel);
 
 			if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.HasResponses) break;
+			nextHintSprite.SetActive(true);
+			_finishedTyping = true;
 
-			yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+			yield return new WaitUntil(() => _nextDialogueAllowed);
+			_nextDialogueAllowed = false;
+			nextHintSprite.SetActive(false);
+			_finishedTyping = false;
 		}
 
 		if (dialogueObject.HasResponses)
@@ -51,6 +60,17 @@ public class DialogueUI : MonoBehaviour
 		}
 	}
 
+	public void TryGoNextDialogue()
+	{
+		if (!_finishedTyping)
+		{
+			_typewriterEffect.GoFast();
+			return;
+		}
+
+		_nextDialogueAllowed = true;
+	}
+
 	public void SetPanelHeight(float h)
 	{
 		RectTransform rt = _dialoguePanelRectTransform;
@@ -61,5 +81,6 @@ public class DialogueUI : MonoBehaviour
 	{
 		dialoguePanel.SetActive(false);
 		textLabel.text = "";
+		nextHintSprite.SetActive(false);
 	}
 }

@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class TypewriterEffect : MonoBehaviour
 {
-	[SerializeField] private float typeWriterSpeed = 50.0f;
+	[SerializeField] private float defaultTypeWriterSpeed = 12.0f;
+	[SerializeField] private float fastTypeWriterSpeed = 50.0f;
+
+	private float _currentTypeWriterSpeed;
 
 	public Coroutine Run(string textToType, TMP_Text textLabel)
 	{
+		_currentTypeWriterSpeed = defaultTypeWriterSpeed;
 		return StartCoroutine(TypeText(textToType, textLabel));
 	}
 
@@ -20,7 +24,7 @@ public class TypewriterEffect : MonoBehaviour
 
 		while (charIndex < textToType.Length)
 		{
-			t += Time.deltaTime * typeWriterSpeed;
+			t += Time.deltaTime * _currentTypeWriterSpeed;
 			charIndex = Mathf.FloorToInt(t);
 			charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);
 
@@ -30,5 +34,10 @@ public class TypewriterEffect : MonoBehaviour
 		}
 
 		textLabel.text = textToType;
+	}
+
+	public void GoFast()
+	{
+		_currentTypeWriterSpeed = fastTypeWriterSpeed;
 	}
 }
