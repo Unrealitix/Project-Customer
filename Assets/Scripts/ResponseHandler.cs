@@ -12,7 +12,7 @@ public class ResponseHandler : MonoBehaviour
 
 	private void Start()
 	{
-		_responseButtons = GetComponentsInChildren<Button>();
+		_responseButtons = responseBox.GetComponentsInChildren<Button>();
 		_dialogueUI = GetComponent<DialogueUI>();
 
 		HideButtons();

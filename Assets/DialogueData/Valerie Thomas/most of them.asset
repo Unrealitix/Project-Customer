@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Some of them, yes.
+  - Some of them, yes. 2
+  - Some of them, yes. 3
   responses:
   - responseText: Back to start
     dialogueObject: {fileID: 11400000, guid: 321b86c169c32834ea6def99896561ff, type: 2}
