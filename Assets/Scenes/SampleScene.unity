@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Cube
   description: Squer
+  insideFetchZone: 0
 --- !u!114 &52381945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,6 +693,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!1 &187594110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187594112}
+  - component: {fileID: 187594111}
+  m_Layer: 0
+  m_Name: Fetch Zone
+  m_TagString: Fetch Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &187594111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187594110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &187594112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187594110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.176, y: 0.692, z: -1.14}
+  m_LocalScale: {x: 1, y: 2.1466, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,18 +2770,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378955240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.677}
+  m_LocalRotation: {x: -0, y: -0.9286369, z: -0, w: 0.37098995}
+  m_LocalPosition: {x: 0, y: 0, z: -0.979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1750018059}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: -136.447, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.153}
+  m_AnchoredPosition: {x: -0.925, y: 0.584}
   m_SizeDelta: {x: 1.2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378955247
@@ -2750,7 +2796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a95b4b224bc1040a6894760979d148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriterSpeed: 12
+  defaultTypeWriterSpeed: 12
+  fastTypeWriterSpeed: 50
 --- !u!114 &1378955248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3651,6 +3698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Cylinder
   description: A strange looking tube
+  insideFetchZone: 0
 --- !u!114 &1877395115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3914,6 +3962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Orb
   description: hehe
+  insideFetchZone: 0
 --- !u!54 &1954021648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4827,6 +4876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Capsule
   description: This is the description for a capsule!
+  insideFetchZone: 0
 --- !u!136 &2048793350
 CapsuleCollider:
   m_ObjectHideFlags: 0
