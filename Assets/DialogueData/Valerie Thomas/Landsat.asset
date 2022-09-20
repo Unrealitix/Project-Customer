@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
+  m_Name: Landsat
+  m_EditorClassIdentifier: 
+  dialogue:
+  - The Landsat is a satellite used to take pictures of the earth.
+  - I worked with Landsat data in the 1970's, their data was uploaded to the CCTs.
+  - 'There should be a miniature Landsat 9 here somewhere. '
+  - It is the newest version of the Landsat satellites.
+  - It was launched in september of 2021, and is still orbiting the earth today!
+  responses:
+  - responseText: Amazing.
+    dialogueObject: {fileID: 11400000, guid: a6fa78e2ab50ac5408eca5063ad20999, type: 2}

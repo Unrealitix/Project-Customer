@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: yay historyfact
+  m_Name: Laika
   m_EditorClassIdentifier: 
   dialogue:
-  - That's the spirit! Did you know the Dutch once canibalized their prime minister?
+  - Oh, I almost forgot i had that miniature. Can i see her?
   responses:
-  - responseText: That's horrible
-    dialogueObject: {fileID: 11400000, guid: dcf9b2a31d1ebf042858a5f237c29421, type: 2}
-  - responseText: Are all your history facts like this?
-    dialogueObject: {fileID: 11400000, guid: 7a496250058e3fc4e9e5a3fdfb2ac663, type: 2}
+  - responseText: Here you go.
+    dialogueObject: {fileID: 11400000, guid: 5f1fd53ce6f7dba449d4234c3ec14f9c, type: 2}

@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: Start
+  m_Name: QuestStart
   m_EditorClassIdentifier: 
   dialogue:
-  - Hello! Welcome to one of the many NASA testing rooms.
-  - My name is Valerie Thomas. Would you like a tour?
+  - Okay, if you want to test your knowledge, i'm here.
   responses:
-  - responseText: Yes.
-    dialogueObject: {fileID: 11400000, guid: e5064f9a634a4d44c80ca02ae67da799, type: 2}
-  - responseText: No.
-    dialogueObject: {fileID: 11400000, guid: c2f3fc6e18b9d504abcd602b9c01a230, type: 2}
+  - responseText: Okay, give me a test.
+    dialogueObject: {fileID: 11400000, guid: 2fe24637b345b3f4bbcd98292393ec1b, type: 2}
