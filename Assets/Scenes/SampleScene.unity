@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -426,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Miniature dog
   description: 'A miniature of a dog, the label says "Kudryavka". '
+  insideFetchZone: 0
 --- !u!1 &83734323
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Cup
   description: An empty cup, yet no coffee machine anywhere to be found.
+  insideFetchZone: 0
 --- !u!65 &107974885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1418,7 +1420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -1786,6 +1788,121 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &487968937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 487968938}
+  - component: {fileID: 487968940}
+  - component: {fileID: 487968939}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &487968938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487968937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.014, y: 4.17, z: 2.119}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 928983830}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &487968939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487968937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!108 &487968940
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487968937}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 10
+  m_Range: 100
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &583319543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1989,6 +2106,7 @@ MonoBehaviour:
   propName: Pen holder
   description: A pen holder, yet its primary function is not completed, as there
     are no pens inside.
+  insideFetchZone: 0
 --- !u!114 &606658210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,6 +2607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A simple book.
+  insideFetchZone: 0
 --- !u!114 &791570734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2738,6 +2857,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &928983829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928983830}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928983830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928983829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 487968938}
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017577177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79189c48b8a17bb41a9700877db741a2,
@@ -2873,6 +3024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A simple book.
+  insideFetchZone: 0
 --- !u!65 &1017577180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3037,6 +3189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A simple book.
+  insideFetchZone: 0
 --- !u!65 &1028498496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3452,7 +3605,7 @@ MonoBehaviour:
   m_HapticHoverCancelDuration: 0
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 30
+  m_MaxRaycastDistance: 100
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -3844,6 +3997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Fisher Spacepen
   description: A pen, designed for space.
+  insideFetchZone: 0
 --- !u!136 &1157869346
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4249,6 +4403,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79189c48b8a17bb41a9700877db741a2, type: 3}
+--- !u!1 &1305592310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305592312}
+  - component: {fileID: 1305592311}
+  m_Layer: 0
+  m_Name: Fetch Zone
+  m_TagString: Fetch Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1305592311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305592310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.0196388, z: 1}
+  m_Center: {x: 0, y: 0.5098195, z: 0}
+--- !u!4 &1305592312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305592310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.228, y: 0, z: 1.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1310780508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4353,6 +4552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Globe
   description: A globe of earth, as if NASA doesn't have enough images of earth yet.
+  insideFetchZone: 0
 --- !u!65 &1310780511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4760,18 +4960,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378955240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.633}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -0.195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1750018059}
   m_Father: {fileID: 0}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.298, y: 1.45}
+  m_AnchoredPosition: {x: -1.392, y: 1.439}
   m_SizeDelta: {x: 1.2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378955247
@@ -5435,6 +5635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A simple book.
+  insideFetchZone: 0
 --- !u!54 &1758271824
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5662,7 +5863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934442778}
   m_LocalRotation: {x: -0, y: -0.24624343, z: -0, w: 0.96920806}
-  m_LocalPosition: {x: -1.071, y: 0.773, z: -1.126}
+  m_LocalPosition: {x: -1.104, y: 0.717, z: 0.809}
   m_LocalScale: {x: 0.3, y: 0.8, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6010,7 +6211,7 @@ MonoBehaviour:
   m_HapticHoverCancelDuration: 0
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 30
+  m_MaxRaycastDistance: 100
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -6613,6 +6814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A simple book.
+  insideFetchZone: 0
 --- !u!65 &2114955599
 BoxCollider:
   m_ObjectHideFlags: 0
