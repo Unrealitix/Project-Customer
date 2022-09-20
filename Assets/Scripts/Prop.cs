@@ -18,6 +18,8 @@ public class Prop : MonoBehaviour
 
 	private Vector3 _startPosition;
 
+	[HideInInspector] public bool insideFetchZone;
+
 	private void Start()
 	{
 		_startPosition = transform.position;
@@ -38,16 +40,22 @@ public class Prop : MonoBehaviour
 		_descriptionPanelPrefab = Resources.Load<GameObject>("Prop Description Panel");
 	}
 
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Fetch Zone")) insideFetchZone = true;
+	}
+
 	private void OnTriggerExit(Collider other)
 	{
-		Debug.Log("Exited collision " + other.gameObject.name);
-		if (other.gameObject.CompareTag("Resetter"))
+		if (other.CompareTag("Resetter"))
 		{
 			_rigidbody.position = _startPosition;
 			_rigidbody.velocity = Vector3.zero;
 			_rigidbody.rotation = Quaternion.identity;
 			_rigidbody.angularVelocity = Vector3.zero;
 		}
+
+		if (other.CompareTag("Fetch Zone")) insideFetchZone = false;
 	}
 
 	private void Grab(SelectEnterEventArgs selectEnterEventArgs)
