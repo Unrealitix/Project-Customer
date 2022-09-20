@@ -20,3 +20,7 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: d1b0a4ebe97858547ba9c2468e2c8138, type: 2}
   - responseText: Who gave Dennis this freedom?
     dialogueObject: {fileID: 11400000, guid: 798122717d04ec74ca981447a7a26a70, type: 2}
+  - responseText: Fetch quest
+    dialogueObject: {fileID: 11400000, guid: 077175471be4f5345bbbbf27531407c3, type: 2}
+  propToFetch: 
+  isFetchQuest: 0
