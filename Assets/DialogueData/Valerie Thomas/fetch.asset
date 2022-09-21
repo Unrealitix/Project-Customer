@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: fetch
   m_EditorClassIdentifier: 
   dialogue:
-  - Please bring me a cube
-  propToFetch: Cube
+  - Please bring me a dog
+  propToFetch: Laika
   responses:
   - responseText: Here you go
     dialogueObject: {fileID: 11400000, guid: 0184024f978be244d8d64a5c7b7a38d0, type: 2}
