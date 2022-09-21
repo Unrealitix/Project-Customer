@@ -17,12 +17,14 @@ public class Prop : MonoBehaviour
 	private Rigidbody _rigidbody;
 
 	private Vector3 _startPosition;
+	private Quaternion _startRotation;
 
 	[HideInInspector] public bool insideFetchZone;
 
 	private void Start()
 	{
 		_startPosition = transform.position;
+		_startRotation = transform.rotation;
 		_rigidbody = GetComponent<Rigidbody>();
 
 		_grabInteractable = GetComponent<XRGrabInteractable>();
@@ -51,7 +53,7 @@ public class Prop : MonoBehaviour
 		{
 			_rigidbody.position = _startPosition;
 			_rigidbody.velocity = Vector3.zero;
-			_rigidbody.rotation = Quaternion.identity;
+			_rigidbody.rotation = _startRotation;
 			_rigidbody.angularVelocity = Vector3.zero;
 		}
 
