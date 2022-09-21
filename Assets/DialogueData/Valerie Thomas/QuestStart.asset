@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: learning
+  m_Name: QuestStart
   m_EditorClassIdentifier: 
   dialogue:
-  - I have no idea, I just know a lot of 'fun' facts.
+  - Okay, if you want to test your knowledge, i'm here.
   responses:
-  - responseText: Back to start
-    dialogueObject: {fileID: 11400000, guid: 321b86c169c32834ea6def99896561ff, type: 2}
+  - responseText: Okay, give me a test.
+    dialogueObject: {fileID: 11400000, guid: 2fe24637b345b3f4bbcd98292393ec1b, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
+  m_Name: CCTs
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Yes! I used to work a lot with these.
+  - Everyone would always come to me for questions, I was the expert on these tapes.
+  - I used these tapes working in the LACIE project, you can see the logo on the
+    wall there.
+  responses:
+  - responseText: What was LACIE?
+    dialogueObject: {fileID: 11400000, guid: 6d9bc3bd9dae0ef40a8386d1084a45aa, type: 2}
+  - responseText: Did you do other things?
+    dialogueObject: {fileID: 11400000, guid: 1575a92324411884b8868d5ece987166, type: 2}

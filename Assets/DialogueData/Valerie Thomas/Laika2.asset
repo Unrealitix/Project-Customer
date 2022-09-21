@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
+  m_Name: Laika2
+  m_EditorClassIdentifier: 
+  dialogue:
+  - This is Kudryavka, but better known as Laika.
+  - Such a cute dog. She really showed that even female dogs can make great leaps
+    forward.
+  - Or in this case, great leaps upward.
+  - Laika was the first living animal to go into orbit. Launched by the Soviets on
+    October 4th, 1957.
+  - Like most space dogs, she was a stray from Moscow.
+  - Strays were chosen because they could easily adapt to diffucult situations.
+  responses:
+  - responseText: Such a good girl.
+    dialogueObject: {fileID: 11400000, guid: a6fa78e2ab50ac5408eca5063ad20999, type: 2}

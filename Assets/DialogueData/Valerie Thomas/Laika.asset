@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: most of them
+  m_Name: Laika
   m_EditorClassIdentifier: 
   dialogue:
-  - Some of them, yes.
-  - Some of them, yes. 2
-  - Some of them, yes. 3
+  - Oh, I almost forgot i had that miniature. Can i see her?
   responses:
-  - responseText: Back to start
-    dialogueObject: {fileID: 11400000, guid: 321b86c169c32834ea6def99896561ff, type: 2}
+  - responseText: Here you go.
+    dialogueObject: {fileID: 11400000, guid: 5f1fd53ce6f7dba449d4234c3ec14f9c, type: 2}

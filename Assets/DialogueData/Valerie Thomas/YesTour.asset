@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: yay historyfact
+  m_Name: YesTour
   m_EditorClassIdentifier: 
   dialogue:
-  - That's the spirit! Did you know the Dutch once canibalized their prime minister?
+  - Perfect! Let's start with something simple, do you know what CCTs are?
   responses:
-  - responseText: That's horrible
-    dialogueObject: {fileID: 11400000, guid: dcf9b2a31d1ebf042858a5f237c29421, type: 2}
-  - responseText: Are all your history facts like this?
-    dialogueObject: {fileID: 11400000, guid: 7a496250058e3fc4e9e5a3fdfb2ac663, type: 2}
+  - responseText: You mean this?
+    dialogueObject: {fileID: 11400000, guid: 842fc030a02fb844d86367c75b03fde9, type: 2}
