@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
   m_Name: TestStart
   m_EditorClassIdentifier: 
-  dialogue: []
-  responses: []
+  dialogue:
+  - What object was used to store Landsat data?
+  propToFetch: cct_one_tape
+  responses:
+  - responseText: A CCT!
+    dialogueObject: {fileID: 11400000, guid: d86b3ffcfedb0fc41b640c7977cd7162, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: YesTour
+  m_Name: Wrong3
   m_EditorClassIdentifier: 
   dialogue:
-  - Perfect! Let's start with something simple, do you know what CCTs are?
-  propToFetch: cct_one_tape
+  - Nope, that would be something else.
+  propToFetch: 
   responses:
-  - responseText: You mean this?
-    dialogueObject: {fileID: 11400000, guid: 842fc030a02fb844d86367c75b03fde9, type: 2}
+  - responseText: i'll get it next time.
+    dialogueObject: {fileID: 11400000, guid: 5f7a33531d95c5e458446a677e7c24ec, type: 2}
