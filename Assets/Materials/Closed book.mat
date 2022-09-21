@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Closed book
-  m_Shader: {fileID: -6465566751694194690, guid: 91f34bf0dced3784a86abdf9a89991d3,
+  m_Shader: {fileID: -6465566751694194690, guid: dc5c0655f8c83524caf0d79684e77759,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
