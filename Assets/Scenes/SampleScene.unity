@@ -472,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Dog statue
   description: 'A miniature of a dog, the label says "Kudryavka". '
+  collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
 --- !u!65 &66121614
 BoxCollider:
@@ -809,7 +810,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
@@ -937,7 +938,7 @@ Transform:
   m_Children:
   - {fileID: 1499206604}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &184339998
 MonoBehaviour:
@@ -963,7 +964,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
@@ -1055,6 +1056,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585549}
+  - component: {fileID: 330585550}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1234,6 +1236,102 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_HasMigratedActions: 1
+--- !u!82 &330585550
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4ac8fa4238a01234b919d7e9685ab2ed, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1425,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -1932,6 +2030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Pen holder
   description: A pen holder, so that your pens don't roll off the table.
+  collisionSound: {fileID: 8300000, guid: a255f3da9e42d9645bcf0d787a6b4d63, type: 3}
   insideFetchZone: 0
 --- !u!114 &606658210
 MonoBehaviour:
@@ -2129,104 +2228,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.018484162, y: 0.0025847778, z: 0.016448699}
   m_Center: {x: 0.00016159352, y: -0.008707572, z: -0.00013039692}
---- !u!1 &700267582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 700267586}
-  - component: {fileID: 700267585}
-  - component: {fileID: 700267584}
-  - component: {fileID: 700267583}
-  m_Layer: 0
-  m_Name: WallBack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &700267583
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700267582}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &700267584
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700267582}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &700267585
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700267582}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &700267586
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700267582}
-  m_LocalRotation: {x: 0.50000006, y: 0.49999988, z: 0.49999982, w: 0.50000036}
-  m_LocalPosition: {x: 0.00000040732715, y: 0.2499978, z: -1.5}
-  m_LocalScale: {x: 0.05, y: 0.1, z: 0.3}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: -180, y: 270, z: -90}
 --- !u!1 &756950918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5758600f299571d4799e47dde13f1d2e,
@@ -2604,6 +2605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Globe
   description: A globe, as if NASA didn't have enough pictures of earth yet.
+  collisionSound: {fileID: 8300000, guid: 35360b215bbaa704088171a4164d808f, type: 3}
   insideFetchZone: 0
 --- !u!64 &845719449
 MeshCollider:
@@ -2639,6 +2641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Landsat 9
   description: A miniature statellite, it should still be orbiting the earth now.
+  collisionSound: {fileID: 8300000, guid: 0881f2d78e506d844b03240b0088b76b, type: 3}
   insideFetchZone: 0
 --- !u!114 &871263449
 MonoBehaviour:
@@ -2945,6 +2948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A book, it's titlted "Visit to Small Universe" by Virginia Trimble.
+  collisionSound: {fileID: 8300000, guid: 0f00ca907e8ae464e8d2f79e524cb1ed, type: 3}
   insideFetchZone: 0
 --- !u!114 &1050052698
 MonoBehaviour:
@@ -3120,7 +3124,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062972807
 GameObject:
@@ -3859,7 +3863,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1134021160
 GameObject:
@@ -3894,6 +3898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Pencil
   description: John Wick's favourite tool.
+  collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
 --- !u!114 &1134021163
 MonoBehaviour:
@@ -4355,7 +4360,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317466310
 GameObject:
@@ -4659,6 +4664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: CCT Rack
   description: A small rack filled with CCTs.
+  collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
 --- !u!1001 &1378258019
 PrefabInstance:
@@ -4953,7 +4959,7 @@ RectTransform:
   m_Children:
   - {fileID: 1750018059}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5196,6 +5202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A book, it's titlted "radioactive substances" by Marie Curie.
+  collisionSound: {fileID: 8300000, guid: 86ebff7a517934e4081f23fef2c398bd, type: 3}
   insideFetchZone: 0
 --- !u!1001 &1404626605
 PrefabInstance:
@@ -5477,104 +5484,6 @@ Transform:
   m_Father: {fileID: 184339997}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1517022958
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1517022962}
-  - component: {fileID: 1517022961}
-  - component: {fileID: 1517022960}
-  - component: {fileID: 1517022959}
-  m_Layer: 0
-  m_Name: WallLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &1517022959
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517022958}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1517022960
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517022958}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1517022961
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517022958}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1517022962
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517022958}
-  m_LocalRotation: {x: -0.7071072, y: -0.7071065, z: 0.00000008940697, w: -0.0000000838037}
-  m_LocalPosition: {x: -1.4999998, y: 0.25, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.1, z: 0.3}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: -90}
 --- !u!1 &1535100479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c245e7eee869c84da31463c58dc0985,
@@ -5740,6 +5649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A book, it's titlted "To Space & Back" by Sally Ride.
+  collisionSound: {fileID: 8300000, guid: 35360b215bbaa704088171a4164d808f, type: 3}
   insideFetchZone: 0
 --- !u!1 &1569854395 stripped
 GameObject:
@@ -5908,6 +5818,7 @@ MonoBehaviour:
   description: A special kind of tape used for mass storage back in the 80s. Companies
     today still use tapes like these for mass storage. They're way more reliable
     than any old hard drive for backups.
+  collisionSound: {fileID: 8300000, guid: c9baa6a0c97e8964fa3acdca9002914e, type: 3}
   insideFetchZone: 0
 --- !u!1 &1608942231
 GameObject:
@@ -6265,6 +6176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A book, it's titlted "Understanding Computers" by Grace Hopper.
+  collisionSound: {fileID: 8300000, guid: 86ebff7a517934e4081f23fef2c398bd, type: 3}
   insideFetchZone: 0
 --- !u!1001 &1704328668
 PrefabInstance:
@@ -6457,7 +6369,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 17.827, z: 0}
 --- !u!1 &1750018058
 GameObject:
@@ -6672,6 +6584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Book
   description: A book, it's titlted "Jurassic Coast Fossils" by Mary Anning.
+  collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
 --- !u!54 &1758271824
 Rigidbody:
@@ -6859,6 +6772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propName: Spacepen
   description: A spacepen made by Fisher. It looks really expensive.
+  collisionSound: {fileID: 8300000, guid: c6d117a6cb87cc04ab0710779e027880, type: 3}
   insideFetchZone: 0
 --- !u!114 &1823541903
 MonoBehaviour:
@@ -7090,7 +7004,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
@@ -7363,7 +7277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: -28.511, z: 0}
 --- !u!1 &1936932940 stripped
 GameObject:
@@ -7400,6 +7314,7 @@ MonoBehaviour:
   propName: Coffee Mug
   description: A simple mug, containing some form of caffeinated beverage also known
     as coffee.
+  collisionSound: {fileID: 8300000, guid: 600be1e531e64d6419655bf781942755, type: 3}
   insideFetchZone: 0
 --- !u!114 &1936932946
 MonoBehaviour:

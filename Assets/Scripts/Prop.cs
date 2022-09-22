@@ -10,6 +10,7 @@ public class Prop : MonoBehaviour
 {
 	[SerializeField] private string propName;
 	[TextArea(3, 10)] [SerializeField] private string description;
+	[SerializeField] private AudioClip collisionSound;
 	private GameObject _descriptionPanel;
 	private GameObject _descriptionPanelPrefab;
 	private XRGrabInteractable _grabInteractable;
@@ -23,8 +24,9 @@ public class Prop : MonoBehaviour
 
 	private void Start()
 	{
-		_startPosition = transform.position;
-		_startRotation = transform.rotation;
+		Transform t = transform;
+		_startPosition = t.position;
+		_startRotation = t.rotation;
 		_rigidbody = GetComponent<Rigidbody>();
 
 		_grabInteractable = GetComponent<XRGrabInteractable>();
@@ -40,6 +42,13 @@ public class Prop : MonoBehaviour
 		}
 
 		_descriptionPanelPrefab = Resources.Load<GameObject>("Prop Description Panel");
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (Time.timeSinceLevelLoad > 2.0f)
+			if (collisionSound != null)
+				AudioSource.PlayClipAtPoint(collisionSound, transform.position, collision.relativeVelocity.magnitude);
 	}
 
 	private void OnTriggerEnter(Collider other)
