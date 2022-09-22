@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: THE GLASS ROOM
-  m_Shader: {fileID: -6465566751694194690, guid: 91f34bf0dced3784a86abdf9a89991d3,
+  m_Shader: {fileID: -6465566751694194690, guid: 2ab2a14efc8685b48b1d630c39b372b1,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -87,7 +87,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 0.163
     - _AlphaClip: 0
+    - _AlphaClipping: 0.1
     - _AmbientEnvironmentMultiplier: 1
     - _Blend: 0
     - _BumpScale: 1
@@ -119,7 +121,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AmbientColor: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.2863564, g: 0.92165744, b: 0.9339623, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

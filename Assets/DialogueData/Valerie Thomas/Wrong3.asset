@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
+  m_Name: Wrong3
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Nope, that would be something else.
+  propToFetch: 
+  responses:
+  - responseText: i'll get it next time.
+    dialogueObject: {fileID: 11400000, guid: 5f7a33531d95c5e458446a677e7c24ec, type: 2}

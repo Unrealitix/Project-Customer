@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
+  m_Name: Spacepen
+  m_EditorClassIdentifier: 
+  dialogue:
+  - You mean the spacepen? That is actually something I did not personally work on.
+  - It is simply an interesting piece of NASA history. It costed about 1 milion dollars
+    to design it.
+  - It was needed because pens didn't work in space, and pencils spread too much
+    dust.
+  - The Fisher spacepen is able to write in zero gravity, and even on surfaces like
+    glass.
+  responses:
+  - responseText: Interesting.
+    dialogueObject: {fileID: 11400000, guid: a6fa78e2ab50ac5408eca5063ad20999, type: 2}
