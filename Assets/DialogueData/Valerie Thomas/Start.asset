@@ -16,12 +16,13 @@ MonoBehaviour:
   - Hello! Welcome to one of the many NASA testing rooms.
   - My name is Valerie Thomas.
   - I worked at NASA in the 1970's, on projects like LACIE and the Landsat program.
-  - Now I am a big supporter of women in STEM fields, like the one i worked in at
+  - Now I am a big supporter of women in STEM fields, like the one I worked in at
     NASA.
   - This is because there are simply too few women in STEM fields.
   - But there are and were so many women working in STEM that proved it isn't just
     for men, like me.
   - Anyhow, would you like a small tour of the room?
+  propToFetch: 
   responses:
   - responseText: Yes.
     dialogueObject: {fileID: 11400000, guid: e5064f9a634a4d44c80ca02ae67da799, type: 2}
