@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: YesTour
   m_EditorClassIdentifier: 
   dialogue:
-  - Perfect! Let's start with something simple, do you know what CCTs are?
+  - Perfect! Let's start with something simple, can you bring me a CCT?
   propToFetch: cct_one_tape
   responses:
   - responseText: You mean this?

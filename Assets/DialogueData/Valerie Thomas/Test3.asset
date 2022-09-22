@@ -20,5 +20,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: 1108fa842be4dd34d914af0f6301cd70, type: 2}
   - responseText: Show a 3D image.
     dialogueObject: {fileID: 11400000, guid: abc94bc63fafe7f47be680d2196ab6ba, type: 2}
-  - responseText: Store data
+  - responseText: Store data.
     dialogueObject: {fileID: 11400000, guid: 1108fa842be4dd34d914af0f6301cd70, type: 2}

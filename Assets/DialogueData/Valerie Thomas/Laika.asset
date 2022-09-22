@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Laika
   m_EditorClassIdentifier: 
   dialogue:
-  - Oh, I almost forgot i had that miniature. Can i see her?
+  - Oh, I almost forgot I had that miniature. Can I see her?
   propToFetch: Laika
   responses:
   - responseText: Here you go.
