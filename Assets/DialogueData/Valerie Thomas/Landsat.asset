@@ -16,8 +16,7 @@ MonoBehaviour:
   - The Landsat is a satellite used to take pictures of the earth.
   - I worked with Landsat data in the 1970's, their data was uploaded to the CCTs.
   - 'There should be a miniature Landsat 9 here somewhere. '
-  - It is the newest version of the Landsat satellites.
-  - It was launched in september of 2021, and is still orbiting the earth today!
+  propToFetch: Landsat
   responses:
-  - responseText: Amazing.
-    dialogueObject: {fileID: 11400000, guid: a6fa78e2ab50ac5408eca5063ad20999, type: 2}
+  - responseText: Well I found a satellite here.
+    dialogueObject: {fileID: 11400000, guid: 7331fd4aff3bad5499214f6d88046371, type: 2}

@@ -16,11 +16,11 @@ MonoBehaviour:
   - What did Valerie Thomas patent in 1980?
   propToFetch: 
   responses:
-  - responseText: CCTs
+  - responseText: CCTs.
     dialogueObject: {fileID: 11400000, guid: 026ad52223198a546865ea243f87fb45, type: 2}
-  - responseText: Illusion Transmitter
+  - responseText: Illusion Transmitter.
     dialogueObject: {fileID: 11400000, guid: 5f7a33531d95c5e458446a677e7c24ec, type: 2}
-  - responseText: Landsat satellites
+  - responseText: Landsat satellites.
     dialogueObject: {fileID: 11400000, guid: 026ad52223198a546865ea243f87fb45, type: 2}
-  - responseText: Spacepens
+  - responseText: Spacepens.
     dialogueObject: {fileID: 11400000, guid: 026ad52223198a546865ea243f87fb45, type: 2}

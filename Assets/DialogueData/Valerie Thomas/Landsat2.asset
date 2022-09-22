@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33500f19581bb5c4c95c2674baa34b61, type: 3}
-  m_Name: thanks for cube
+  m_Name: Landsat2
   m_EditorClassIdentifier: 
   dialogue:
-  - Thanks for the cube!
-  - I'll put this to good use...
+  - Yes, that's the one.
+  - It is the newest version of the Landsat satellites.
+  - It was launched in september of 2021, and is still orbiting the earth today!
   propToFetch: 
   responses:
-  - responseText: Back to start
-    dialogueObject: {fileID: 11400000, guid: 321b86c169c32834ea6def99896561ff, type: 2}
+  - responseText: Amazing.
+    dialogueObject: {fileID: 11400000, guid: a6fa78e2ab50ac5408eca5063ad20999, type: 2}

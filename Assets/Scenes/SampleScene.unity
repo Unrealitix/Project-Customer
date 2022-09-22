@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88ba18b15c2f334ca1fd70b289f6d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propName: Miniature dog
+  propName: Dog statue
   description: 'A miniature of a dog, the label says "Kudryavka". '
   insideFetchZone: 0
 --- !u!1 &83734323
@@ -1800,8 +1800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propName: Pen holder
-  description: A pen holder, yet its primary function is not completed, as there
-    are no pens inside.
+  description: A pen holder, so that your pens don't roll off the table.
   insideFetchZone: 0
 --- !u!114 &606658210
 MonoBehaviour:
@@ -5523,9 +5522,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propName: CCT
-  description: A special kind of tape used for mass storage back in the 80s. Did
-    you know that companies today still use tapes like these for mass storage? They're
-    way more reliable than any old hard drive for backups.
+  description: A special kind of tape used for mass storage back in the 80s. Companies
+    today still use tapes like these for mass storage. They're way more reliable
+    than any old hard drive for backups.
   insideFetchZone: 0
 --- !u!1 &1608942231
 GameObject:
@@ -5767,9 +5766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propName: Book
-  description: 'A book, it''s titlted "Ada, the Enchantress of Numbers: A Selection
-    from the Letters of Lord Byron''s Daughter and Her Description of the First Computer"
-    by Ada of Lovelace.'
+  description: A book, it's titlted "Understanding Computers" by Grace Hopper.
   insideFetchZone: 0
 --- !u!1001 &1704328668
 PrefabInstance:
@@ -6662,8 +6659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propName: Coffee Mug
-  description: A simple coffee mug, probably containing some form of caffeinated
-    beverage also known as coffee.
+  description: A simple mug, containing some form of caffeinated beverage also known
+    as coffee.
   insideFetchZone: 0
 --- !u!114 &1936932946
 MonoBehaviour:
@@ -7886,8 +7883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propName: Spacepen
-  description: A spacepen, it is said it can write in zero-gravity and even on surfaces
-    like glass!
+  description: A spacepen made by Fisher. It looks really expensive.
   insideFetchZone: 0
 --- !u!114 &2127117787
 MonoBehaviour:
