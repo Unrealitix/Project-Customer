@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - You see that big machine in the corner there?
-  - That is the illusion transmitter, I pattented it in 1980.
+  - That is the illusion transmitter, I patented it in 1980.
   - It is the first ever 3D device, projecting what is in simple terms a hologram.
   - It does this by using concave mirrors, and transmitting an image through the
     lens.
   - This machine pioneered most future 3D technology.
+  propToFetch: 
   responses:
   - responseText: Good job.
     dialogueObject: {fileID: 11400000, guid: a6fa78e2ab50ac5408eca5063ad20999, type: 2}

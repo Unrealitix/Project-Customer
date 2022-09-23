@@ -22,3 +22,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: abc94bc63fafe7f47be680d2196ab6ba, type: 2}
   - responseText: Store data.
     dialogueObject: {fileID: 11400000, guid: 1108fa842be4dd34d914af0f6301cd70, type: 2}
+  - responseText: Can I get a tour instead?
+    dialogueObject: {fileID: 11400000, guid: e5064f9a634a4d44c80ca02ae67da799, type: 2}
