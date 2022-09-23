@@ -10,6 +10,7 @@ public class DialogueUI : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI textLabel;
 	[SerializeField] private DialogueObject startDialogue;
 	[SerializeField] private GameObject nextHintSprite;
+	[SerializeField] private AudioSource audioSource;
 	private ResponseHandler _responseHandler;
 
 	private TypewriterEffect _typewriterEffect;
@@ -37,6 +38,12 @@ public class DialogueUI : MonoBehaviour
 		for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
 		{
 			string dialogue = dialogueObject.Dialogue[i];
+			// if (dialogueObject.AudioClips != null)
+			// {
+			// 	audioSource.clip = dialogueObject.AudioClips[i];
+			// 	audioSource.Play();
+			// }
+
 			yield return _typewriterEffect.Run(dialogue, textLabel);
 
 			if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.IsFetchQuest)

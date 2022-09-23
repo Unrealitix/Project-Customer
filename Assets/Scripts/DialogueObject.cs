@@ -4,12 +4,14 @@ using UnityEngine;
 public class DialogueObject : ScriptableObject
 {
 	[SerializeField] [TextArea] private string[] dialogue;
+	[SerializeField] private AudioClip[] audioClips;
 
 	[SerializeField] private string propToFetch;
 
 	[SerializeField] private Response[] responses;
 
 	public string[] Dialogue => dialogue;
+	public AudioClip[] AudioClips => audioClips;
 
 	public bool HasResponses => responses is {Length: > 0};
 	public Response[] Responses => responses;
