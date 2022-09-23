@@ -39,7 +39,7 @@ public class DialogueUI : MonoBehaviour
 			string dialogue = dialogueObject.Dialogue[i];
 			yield return _typewriterEffect.Run(dialogue, textLabel);
 
-			if (dialogueObject.IsFetchQuest)
+			if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.IsFetchQuest)
 			{
 				Prop toFetch = FindObjectsOfType<Prop>().ToList().Find(prop => prop.gameObject.name == dialogueObject.PropToFetch);
 				if (toFetch == null) Debug.LogError($"Prop \"{dialogueObject.PropToFetch}\" not found");
