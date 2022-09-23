@@ -22,5 +22,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: 5f7a33531d95c5e458446a677e7c24ec, type: 2}
   - responseText: Landsat satellites.
     dialogueObject: {fileID: 11400000, guid: 026ad52223198a546865ea243f87fb45, type: 2}
-  - responseText: Spacepens.
-    dialogueObject: {fileID: 11400000, guid: 026ad52223198a546865ea243f87fb45, type: 2}
+  - responseText: Can I get that tour still?
+    dialogueObject: {fileID: 11400000, guid: e5064f9a634a4d44c80ca02ae67da799, type: 2}

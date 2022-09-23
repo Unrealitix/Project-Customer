@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - What object was used to store Landsat data?
-  propToFetch: cct_one_tape
+  propToFetch: 
   responses:
-  - responseText: A CCT!
+  - responseText: A CCT.
     dialogueObject: {fileID: 11400000, guid: d86b3ffcfedb0fc41b640c7977cd7162, type: 2}
+  - responseText: The Illusion Transmitter.
+    dialogueObject: {fileID: 11400000, guid: 858c1f60d76f04648a7c52e72cddc03e, type: 2}
+  - responseText: The computer on the desk.
+    dialogueObject: {fileID: 11400000, guid: 858c1f60d76f04648a7c52e72cddc03e, type: 2}
+  - responseText: Actually I would like the tour
+    dialogueObject: {fileID: 11400000, guid: e5064f9a634a4d44c80ca02ae67da799, type: 2}
