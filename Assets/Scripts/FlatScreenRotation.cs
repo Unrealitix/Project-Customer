@@ -10,12 +10,14 @@ public class FlatScreenRotation : MonoBehaviour
 	[SerializeField] private float xSensitivity = 1f;
 	[SerializeField] private float ySensitivity = 1f;
 
+	[SerializeField] private GameObject reticleCanvas;
 
 	private void Start()
 	{
 		if (XRIsPresent())
 		{
 			enabled = false;
+			reticleCanvas.SetActive(false);
 			return;
 		}
 
@@ -31,6 +33,7 @@ public class FlatScreenRotation : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 
+		//TODO: Make this better, so it stops being able to rotate in a loop-de-loop
 		transform.eulerAngles -= new Vector3(
 			Input.GetAxis("Mouse Y") * ySensitivity,
 			Input.GetAxis("Mouse X") * -xSensitivity,
