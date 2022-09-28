@@ -75,7 +75,7 @@ public class Prop : MonoBehaviour
 		SpawnPanel(selectEnterEventArgs.interactorObject.transform.gameObject.GetNamedChild("Panel Origin").transform);
 	}
 
-	private void SpawnPanel(Transform parent)
+	public void SpawnPanel(Transform parent)
 	{
 		if (_descriptionPanel != null) return;
 
@@ -98,6 +98,11 @@ public class Prop : MonoBehaviour
 	private void Release(SelectExitEventArgs selectExitEventArgs)
 	{
 		// Debug.Log("Released");
+		DestroyPanel();
+	}
+
+	public void DestroyPanel()
+	{
 		Destroy(_descriptionPanel);
 	}
 }
