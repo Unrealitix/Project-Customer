@@ -5060,7 +5060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305592312}
   - component: {fileID: 1305592311}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fetch Zone
   m_TagString: Fetch Zone
   m_Icon: {fileID: 0}
