@@ -90,6 +90,9 @@ public class FlatScreenRotation : MonoBehaviour
 		_heldPropStartAngularDrag = _heldPropRb.angularDrag;
 		_heldPropRb.angularDrag = heldPropAngularDrag;
 
+		//when prop needs to reset, release it
+		_heldPropProp.OnReset += ReleaseProp;
+
 		//set target position to the right distance in front of the player
 		heldPropLocation.localPosition = new Vector3(0, 0, hit.distance);
 
@@ -102,6 +105,10 @@ public class FlatScreenRotation : MonoBehaviour
 		_heldPropRb.useGravity = true;
 		_heldPropRb.angularDrag = _heldPropStartAngularDrag;
 
+		//remove the reset event
+		_heldPropProp.OnReset -= ReleaseProp;
+
+		//remove the panel
 		_heldPropProp.DestroyPanel();
 
 		//variable de-setup

@@ -11,6 +11,11 @@ public class Prop : MonoBehaviour
 	[SerializeField] private string propName;
 	[TextArea(3, 10)] [SerializeField] private string description;
 	[SerializeField] private AudioClip collisionSound;
+
+	public delegate void OnResetEvent();
+
+	public event OnResetEvent OnReset;
+
 	private GameObject _descriptionPanel;
 	private GameObject _descriptionPanelPrefab;
 	private XRGrabInteractable _grabInteractable;
@@ -41,6 +46,9 @@ public class Prop : MonoBehaviour
 			_grabInteractable.movementType = XRBaseInteractable.MovementType.VelocityTracking;
 		}
 
+		//Respawn the prop if it falls out of the world
+		OnReset += Respawn;
+
 		_descriptionPanelPrefab = Resources.Load<GameObject>("Prop Description Panel");
 	}
 
@@ -58,15 +66,17 @@ public class Prop : MonoBehaviour
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (other.CompareTag("Resetter"))
-		{
-			_rigidbody.position = _startPosition;
-			_rigidbody.velocity = Vector3.zero;
-			_rigidbody.rotation = _startRotation;
-			_rigidbody.angularVelocity = Vector3.zero;
-		}
+		if (other.CompareTag("Resetter")) OnReset?.Invoke();
 
 		if (other.CompareTag("Fetch Zone")) insideFetchZone = false;
+	}
+
+	private void Respawn()
+	{
+		_rigidbody.position = _startPosition;
+		_rigidbody.velocity = Vector3.zero;
+		_rigidbody.rotation = _startRotation;
+		_rigidbody.angularVelocity = Vector3.zero;
 	}
 
 	private void Grab(SelectEnterEventArgs selectEnterEventArgs)
