@@ -10,7 +10,7 @@ public class FlatScreenRotation : MonoBehaviour
 	[SerializeField] private float xSensitivity = 1f;
 	[SerializeField] private float ySensitivity = 1f;
 	[SerializeField] private float scrollSpeed = 0.1f;
-	[SerializeField] private float heldPropAngularDrag = 2.0f;
+	[SerializeField] private float heldPropDefaultAngularDrag = 2.0f;
 	[SerializeField] private float rotateSpeed = 3.0f;
 
 	[SerializeField] private GameObject reticleCanvas;
@@ -96,7 +96,8 @@ public class FlatScreenRotation : MonoBehaviour
 		//disable physics
 		_heldPropRb.useGravity = false;
 		_heldPropStartAngularDrag = _heldPropRb.angularDrag;
-		_heldPropRb.angularDrag = heldPropAngularDrag;
+		//only heighten the angular drag if the prop's own default angular drag isn't already higher
+		if (_heldPropRb.angularDrag < heldPropDefaultAngularDrag) _heldPropRb.angularDrag = heldPropDefaultAngularDrag;
 
 		//when prop needs to reset, release it
 		_heldPropProp.OnReset += ReleaseProp;
