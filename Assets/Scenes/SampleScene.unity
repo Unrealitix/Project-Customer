@@ -1392,6 +1392,7 @@ MonoBehaviour:
   ySensitivity: 1
   scrollSpeed: 0.1
   heldPropAngularDrag: 2
+  rotateSpeed: 3
   reticleCanvas: {fileID: 690360853}
   heldPropLocation: {fileID: 1047602496}
   panelOrigin: {fileID: 1606114253}

@@ -11,6 +11,7 @@ public class FlatScreenRotation : MonoBehaviour
 	[SerializeField] private float ySensitivity = 1f;
 	[SerializeField] private float scrollSpeed = 0.1f;
 	[SerializeField] private float heldPropAngularDrag = 2.0f;
+	[SerializeField] private float rotateSpeed = 3.0f;
 
 	[SerializeField] private GameObject reticleCanvas;
 
@@ -72,6 +73,13 @@ public class FlatScreenRotation : MonoBehaviour
 
 			//if a prop is held, move it to the heldPropLocation
 			_heldPropRb.MovePosition(heldPropLocation.position);
+
+			if (Input.GetAxis("Horizontal") != 0)
+				_heldPropRb.transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * -rotateSpeed, Space.World);
+			if (Input.GetAxis("Vertical") != 0)
+				_heldPropRb.transform.Rotate(transform.right, Input.GetAxis("Vertical") * rotateSpeed, Space.World);
+			if (Input.GetAxis("Q/E") != 0)
+				_heldPropRb.transform.Rotate(transform.forward, Input.GetAxis("Q/E") * -rotateSpeed, Space.World);
 
 			//if the player lets go of the prop, drop it
 			if (Input.GetMouseButtonUp(0)) ReleaseProp();
