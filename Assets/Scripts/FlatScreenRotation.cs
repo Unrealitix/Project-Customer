@@ -10,6 +10,7 @@ public class FlatScreenRotation : MonoBehaviour
 	[SerializeField] private float xSensitivity = 1f;
 	[SerializeField] private float ySensitivity = 1f;
 	[SerializeField] private float scrollSpeed = 0.1f;
+	[SerializeField] private float heldPropAngularDrag = 2.0f;
 
 	[SerializeField] private GameObject reticleCanvas;
 
@@ -18,6 +19,7 @@ public class FlatScreenRotation : MonoBehaviour
 
 	private Rigidbody _heldPropRb;
 	private Prop _heldPropProp;
+	private float _heldPropStartAngularDrag;
 	private bool _isHoldingProp;
 
 	private void Start()
@@ -84,7 +86,9 @@ public class FlatScreenRotation : MonoBehaviour
 		_isHoldingProp = true;
 
 		//disable physics
-		hit.rigidbody.useGravity = false;
+		_heldPropRb.useGravity = false;
+		_heldPropStartAngularDrag = _heldPropRb.angularDrag;
+		_heldPropRb.angularDrag = heldPropAngularDrag;
 
 		//set target position to the right distance in front of the player
 		heldPropLocation.localPosition = new Vector3(0, 0, hit.distance);
@@ -96,6 +100,7 @@ public class FlatScreenRotation : MonoBehaviour
 	{
 		//re-enable physics
 		_heldPropRb.useGravity = true;
+		_heldPropRb.angularDrag = _heldPropStartAngularDrag;
 
 		_heldPropProp.DestroyPanel();
 
