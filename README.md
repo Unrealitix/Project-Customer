@@ -10,10 +10,10 @@ Science, Technology, Engineering, and Math, the four area’s of STEM. Currently
 
 ## About this game
 
-She can VR
+### She can VR
 This interactive experience aims to teach people about the women that made great leaps forward in science. Explore a small room filled with small items that are connected to the women of STEM, or otherwise to the general time or institution they worked in.
 
-Valerie Thomas
+### Valerie Thomas
 One of these women who (used to) work in STEM is Valerie Thomas, who worked for NASA around the 1970’s, currently the whole experience is based on her and her work in NASA’s Landsat program or the LACIE project.
 
 ## [Click here to download the game!](../../releases/latest)
