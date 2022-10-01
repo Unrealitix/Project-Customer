@@ -7,17 +7,31 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FlatScreenRotation : MonoBehaviour
 {
+	//Camera settings
 	[SerializeField] private float xSensitivity = 1f;
 	[SerializeField] private float ySensitivity = 1f;
-	[SerializeField] private float scrollSpeed = 0.1f;
-	[SerializeField] private float heldPropDefaultAngularDrag = 2.0f;
-	[SerializeField] private float rotateSpeed = 3.0f;
+	[SerializeField] private float rotationSmoothTime = .12f;
 
+	[SerializeField] private float scrollSpeed = 0.1f;
+
+	//Prop settings
+	[SerializeField] private float propRotationSpeed = 3.0f;
+	[SerializeField] private float heldPropDefaultAngularDrag = 2.0f;
+
+	//Object references
 	[SerializeField] private GameObject reticleCanvas;
 
 	[SerializeField] private Transform heldPropLocation;
 	[SerializeField] private Transform panelOrigin;
 
+	//Camera variables
+	private Vector3 _rotationSmoothVelocity;
+	private Vector3 _currentRotation;
+
+	private float _yaw;
+	private float _pitch;
+
+	//Prop variables
 	private Rigidbody _heldPropRb;
 	private Prop _heldPropProp;
 	private float _heldPropStartAngularDrag;
@@ -44,13 +58,15 @@ public class FlatScreenRotation : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 
-		//TODO: Make this better, so it stops being able to rotate in a loop-de-loop
-		transform.eulerAngles -= new Vector3(
-			Input.GetAxis("Mouse Y") * ySensitivity,
-			Input.GetAxis("Mouse X") * -xSensitivity,
-			0);
+		//camera rotation logic (thanks, Sebastian Lague https://www.youtube.com/watch?v=sNmeK3qK7oA)
+		_yaw += Input.GetAxis("Mouse X") * xSensitivity;
+		_pitch -= Input.GetAxis("Mouse Y") * ySensitivity;
+		_pitch = Mathf.Clamp(_pitch, -89f, 89f);
 
+		_currentRotation = Vector3.SmoothDamp(_currentRotation, new Vector3(_pitch, _yaw), ref _rotationSmoothVelocity, rotationSmoothTime);
+		transform.eulerAngles = _currentRotation;
 
+		//prop logic
 		if (!_isHoldingProp)
 		{
 			//if not holding a prop
@@ -75,11 +91,11 @@ public class FlatScreenRotation : MonoBehaviour
 			_heldPropRb.MovePosition(heldPropLocation.position);
 
 			if (Input.GetAxis("Horizontal") != 0)
-				_heldPropRb.transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * -rotateSpeed, Space.World);
+				_heldPropRb.transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * -propRotationSpeed, Space.World);
 			if (Input.GetAxis("Vertical") != 0)
-				_heldPropRb.transform.Rotate(transform.right, Input.GetAxis("Vertical") * rotateSpeed, Space.World);
+				_heldPropRb.transform.Rotate(transform.right, Input.GetAxis("Vertical") * propRotationSpeed, Space.World);
 			if (Input.GetAxis("Q/E") != 0)
-				_heldPropRb.transform.Rotate(transform.forward, Input.GetAxis("Q/E") * -rotateSpeed, Space.World);
+				_heldPropRb.transform.Rotate(transform.forward, Input.GetAxis("Q/E") * -propRotationSpeed, Space.World);
 
 			//if the player lets go of the prop, drop it
 			if (Input.GetMouseButtonUp(0)) ReleaseProp();

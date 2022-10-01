@@ -1390,9 +1390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSensitivity: 1
   ySensitivity: 1
+  rotationSmoothTime: 0.05
   scrollSpeed: 0.1
+  propRotationSpeed: 3
   heldPropDefaultAngularDrag: 2
-  rotateSpeed: 3
   reticleCanvas: {fileID: 690360853}
   heldPropLocation: {fileID: 1047602496}
   panelOrigin: {fileID: 1606114253}
