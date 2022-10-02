@@ -11,6 +11,8 @@ public class Prop : MonoBehaviour
 	[SerializeField] private string propName;
 	[TextArea(3, 10)] [SerializeField] private string description;
 	[SerializeField] private AudioClip collisionSound;
+	[Range(1.0f, 1.5f)] [SerializeField] private float outlineScale = 1.1f;
+	private readonly Color _outlineColor = new(0.57f, 0.79f, 0.91f);
 
 	public delegate void OnResetEvent();
 
@@ -24,6 +26,9 @@ public class Prop : MonoBehaviour
 
 	private Vector3 _startPosition;
 	private Quaternion _startRotation;
+
+	private Outline _outline;
+	private bool _grabbed;
 
 	[HideInInspector] public bool insideFetchZone;
 
@@ -41,8 +46,8 @@ public class Prop : MonoBehaviour
 		}
 		else
 		{
-			_grabInteractable.selectEntered.AddListener(Grab);
-			_grabInteractable.selectExited.AddListener(Release);
+			_grabInteractable.selectEntered.AddListener(XRGrab);
+			_grabInteractable.selectExited.AddListener(XRRelease);
 			_grabInteractable.movementType = XRBaseInteractable.MovementType.VelocityTracking;
 		}
 
@@ -50,11 +55,25 @@ public class Prop : MonoBehaviour
 		OnReset += Respawn;
 
 		_descriptionPanelPrefab = Resources.Load<GameObject>("Prop Description Panel");
+
+		_outline = new Outline(gameObject, Resources.Load<Material>("Outline"), outlineScale, _outlineColor);
+		_outline.Disable();
+	}
+
+	private void OnMouseEnter()
+	{
+		if (_grabbed) return;
+		_outline.Enable();
+	}
+
+	private void OnMouseExit()
+	{
+		_outline.Disable();
 	}
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		if (Time.timeSinceLevelLoad > 2.0f)
+		if (Time.timeSinceLevelLoad > 2.0f) //wait until everything has settled in, before allowing to make interaction noises
 			if (collisionSound != null)
 				AudioSource.PlayClipAtPoint(collisionSound, transform.position, collision.relativeVelocity.magnitude);
 	}
@@ -73,20 +92,22 @@ public class Prop : MonoBehaviour
 
 	private void Respawn()
 	{
+		_outline.Disable();
 		_rigidbody.position = _startPosition;
 		_rigidbody.velocity = Vector3.zero;
 		_rigidbody.rotation = _startRotation;
 		_rigidbody.angularVelocity = Vector3.zero;
 	}
 
-	private void Grab(SelectEnterEventArgs selectEnterEventArgs)
+	private void XRGrab(SelectEnterEventArgs selectEnterEventArgs)
 	{
-		// Debug.Log("Grabbed");
-		SpawnPanel(selectEnterEventArgs.interactorObject.transform.gameObject.GetNamedChild("Panel Origin").transform);
+		Grab(selectEnterEventArgs.interactorObject.transform.gameObject.GetNamedChild("Panel Origin").transform);
 	}
 
-	public void SpawnPanel(Transform parent)
+	public void Grab(Transform parent)
 	{
+		_grabbed = true;
+		_outline.Disable();
 		if (_descriptionPanel != null) return;
 
 		_descriptionPanel = Instantiate(_descriptionPanelPrefab, parent);
@@ -105,14 +126,15 @@ public class Prop : MonoBehaviour
 		});
 	}
 
-	private void Release(SelectExitEventArgs selectExitEventArgs)
+	private void XRRelease(SelectExitEventArgs selectExitEventArgs)
 	{
-		// Debug.Log("Released");
-		DestroyPanel();
+		Release();
 	}
 
-	public void DestroyPanel()
+	public void Release()
 	{
+		_grabbed = false;
+		_outline.Disable();
 		Destroy(_descriptionPanel);
 	}
 }

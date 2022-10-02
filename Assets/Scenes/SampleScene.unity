@@ -473,6 +473,7 @@ MonoBehaviour:
   propName: Dog statue
   description: 'A miniature of a dog, the label says "Kudryavka". '
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!65 &66121614
 BoxCollider:
@@ -2283,6 +2284,7 @@ MonoBehaviour:
   propName: Pen holder
   description: A pen holder, so that your pens don't roll off the table.
   collisionSound: {fileID: 8300000, guid: a255f3da9e42d9645bcf0d787a6b4d63, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!114 &606658210
 MonoBehaviour:
@@ -3016,6 +3018,7 @@ MonoBehaviour:
   propName: Globe
   description: A globe, as if NASA didn't have enough pictures of earth yet.
   collisionSound: {fileID: 8300000, guid: 35360b215bbaa704088171a4164d808f, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!64 &845719449
 MeshCollider:
@@ -3052,6 +3055,7 @@ MonoBehaviour:
   propName: Landsat 9
   description: A miniature statellite, it should still be orbiting the earth now.
   collisionSound: {fileID: 8300000, guid: 0881f2d78e506d844b03240b0088b76b, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!114 &871263449
 MonoBehaviour:
@@ -3481,6 +3485,7 @@ MonoBehaviour:
   propName: Book
   description: A book, it's titled "Visit to Small Universe" by Virginia Trimble.
   collisionSound: {fileID: 8300000, guid: 0f00ca907e8ae464e8d2f79e524cb1ed, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!114 &1050052698
 MonoBehaviour:
@@ -4546,6 +4551,7 @@ MonoBehaviour:
   propName: Pencil
   description: John Wick's favourite tool.
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
+  outlineScale: 1.5
   insideFetchZone: 0
 --- !u!114 &1134021163
 MonoBehaviour:
@@ -4797,53 +4803,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.721
+      value: 0.656
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.833
+      value: 0.8902
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.308
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.39644295
+      value: 0.6735021
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.673502
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.91805935
+      value: 0.21539508
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.21539502
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 133.288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 35.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
@@ -5096,7 +5127,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317466310
 GameObject:
@@ -5402,6 +5433,7 @@ MonoBehaviour:
   propName: CCT Rack
   description: A small rack filled with CCTs.
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
+  outlineScale: 1.05
   insideFetchZone: 0
 --- !u!1001 &1378258019
 PrefabInstance:
@@ -5967,6 +5999,7 @@ MonoBehaviour:
   propName: Book
   description: A book, it's titlted "radioactive substances" by Marie Curie.
   collisionSound: {fileID: 8300000, guid: 86ebff7a517934e4081f23fef2c398bd, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!1001 &1404626605
 PrefabInstance:
@@ -6415,6 +6448,7 @@ MonoBehaviour:
   propName: Book
   description: A book, it's titled "To Space & Back" by Sally Ride.
   collisionSound: {fileID: 8300000, guid: 35360b215bbaa704088171a4164d808f, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!1 &1536106907
 GameObject:
@@ -6699,6 +6733,7 @@ MonoBehaviour:
     today still use tapes like these for mass storage. They're way more reliable
     than any old hard drive for backups.
   collisionSound: {fileID: 8300000, guid: c9baa6a0c97e8964fa3acdca9002914e, type: 3}
+  outlineScale: 1.2
   insideFetchZone: 0
 --- !u!1 &1588497305
 GameObject:
@@ -7164,6 +7199,7 @@ MonoBehaviour:
   propName: Book
   description: A book, it's titled "Understanding Computers" by Grace Hopper.
   collisionSound: {fileID: 8300000, guid: 86ebff7a517934e4081f23fef2c398bd, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!1001 &1704328668
 PrefabInstance:
@@ -7572,6 +7608,7 @@ MonoBehaviour:
   propName: Book
   description: A book, it's titlted "Jurassic Coast Fossils" by Mary Anning.
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!54 &1758271824
 Rigidbody:
@@ -7849,6 +7886,7 @@ MonoBehaviour:
   propName: Spacepen
   description: A spacepen made by Fisher. It looks really expensive.
   collisionSound: {fileID: 8300000, guid: c6d117a6cb87cc04ab0710779e027880, type: 3}
+  outlineScale: 1.5
   insideFetchZone: 0
 --- !u!114 &1823541903
 MonoBehaviour:
@@ -8169,7 +8207,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c245e7eee869c84da31463c58dc0985,
         type: 3}
@@ -8274,7 +8312,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925668448}
-  m_LocalRotation: {x: -0.99835664, y: -0, z: -0, w: -0.057306502}
+  m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0.001830001, y: 0, z: 0}
   m_LocalScale: {x: 0.015854904, y: 0.006256662, z: 0.015854904}
   m_ConstrainProportionsScale: 0
@@ -8382,6 +8420,7 @@ MonoBehaviour:
   description: A simple mug, containing some form of caffeinated beverage also known
     as coffee.
   collisionSound: {fileID: 8300000, guid: 600be1e531e64d6419655bf781942755, type: 3}
+  outlineScale: 1.1
   insideFetchZone: 0
 --- !u!114 &1936932946
 MonoBehaviour:

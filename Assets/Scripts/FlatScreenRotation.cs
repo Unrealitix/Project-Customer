@@ -121,7 +121,7 @@ public class FlatScreenRotation : MonoBehaviour
 		//set target position to the right distance in front of the player
 		heldPropLocation.localPosition = new Vector3(0, 0, hit.distance);
 
-		prop.SpawnPanel(panelOrigin);
+		prop.Grab(panelOrigin);
 	}
 
 	private void ReleaseProp()
@@ -134,7 +134,7 @@ public class FlatScreenRotation : MonoBehaviour
 		_heldPropProp.OnReset -= ReleaseProp;
 
 		//remove the panel
-		_heldPropProp.DestroyPanel();
+		_heldPropProp.Release();
 
 		//variable de-setup
 		_isHoldingProp = false;
