@@ -11,6 +11,11 @@ public class Prop : MonoBehaviour
 	[SerializeField] private string propName;
 	[TextArea(3, 10)] [SerializeField] private string description;
 	[SerializeField] private AudioClip collisionSound;
+
+	public delegate void OnResetEvent();
+
+	public event OnResetEvent OnReset;
+
 	private GameObject _descriptionPanel;
 	private GameObject _descriptionPanelPrefab;
 	private XRGrabInteractable _grabInteractable;
@@ -21,6 +26,8 @@ public class Prop : MonoBehaviour
 	private Quaternion _startRotation;
 
 	[HideInInspector] public bool insideFetchZone;
+
+	[HideInInspector] public Outline outline;
 
 	private void Start()
 	{
@@ -41,7 +48,12 @@ public class Prop : MonoBehaviour
 			_grabInteractable.movementType = XRBaseInteractable.MovementType.VelocityTracking;
 		}
 
+		//Respawn the prop if it falls out of the world
+		OnReset += Respawn;
+
 		_descriptionPanelPrefab = Resources.Load<GameObject>("Prop Description Panel");
+
+		if (!FlatScreenRotation.XRIsPresent()) outline = gameObject.AddComponent<Outline>();
 	}
 
 	private void OnCollisionEnter(Collision collision)
@@ -58,15 +70,27 @@ public class Prop : MonoBehaviour
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (other.CompareTag("Resetter"))
-		{
-			_rigidbody.position = _startPosition;
-			_rigidbody.velocity = Vector3.zero;
-			_rigidbody.rotation = _startRotation;
-			_rigidbody.angularVelocity = Vector3.zero;
-		}
+		if (other.CompareTag("Resetter")) OnReset?.Invoke();
 
 		if (other.CompareTag("Fetch Zone")) insideFetchZone = false;
+	}
+
+	// private void OnMouseEnter()
+	// {
+	// 	outline.Enable();
+	// }
+	//
+	// private void OnMouseExit()
+	// {
+	// 	outline.Disable();
+	// }
+
+	private void Respawn()
+	{
+		_rigidbody.position = _startPosition;
+		_rigidbody.velocity = Vector3.zero;
+		_rigidbody.rotation = _startRotation;
+		_rigidbody.angularVelocity = Vector3.zero;
 	}
 
 	private void Grab(SelectEnterEventArgs selectEnterEventArgs)
@@ -75,7 +99,7 @@ public class Prop : MonoBehaviour
 		SpawnPanel(selectEnterEventArgs.interactorObject.transform.gameObject.GetNamedChild("Panel Origin").transform);
 	}
 
-	private void SpawnPanel(Transform parent)
+	public void SpawnPanel(Transform parent)
 	{
 		if (_descriptionPanel != null) return;
 
@@ -98,6 +122,11 @@ public class Prop : MonoBehaviour
 	private void Release(SelectExitEventArgs selectExitEventArgs)
 	{
 		// Debug.Log("Released");
+		DestroyPanel();
+	}
+
+	public void DestroyPanel()
+	{
 		Destroy(_descriptionPanel);
 	}
 }
