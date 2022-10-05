@@ -474,6 +474,7 @@ MonoBehaviour:
   description: 'A miniature of a dog, the label says "Kudryavka". '
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!65 &66121614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1392,6 +1393,8 @@ MonoBehaviour:
   ySensitivity: 1
   rotationSmoothTime: 0.05
   scrollSpeed: 0.1
+  minPropDistFac: 1.11
+  maxPropDist: 2
   propRotationSpeed: 3
   heldPropDefaultAngularDrag: 2
   reticleCanvas: {fileID: 690360853}
@@ -1828,6 +1831,7 @@ MonoBehaviour:
     as coffee.
   collisionSound: {fileID: 8300000, guid: 600be1e531e64d6419655bf781942755, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!64 &417670252
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2541,6 +2545,7 @@ MonoBehaviour:
   description: A pen holder, so that your pens don't roll off the table.
   collisionSound: {fileID: 8300000, guid: a255f3da9e42d9645bcf0d787a6b4d63, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!114 &606658210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3274,6 +3279,7 @@ MonoBehaviour:
   description: A globe, as if NASA didn't have enough pictures of earth yet.
   collisionSound: {fileID: 8300000, guid: 35360b215bbaa704088171a4164d808f, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!64 &845719449
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3310,6 +3316,7 @@ MonoBehaviour:
   description: A miniature statellite, it should still be orbiting the earth now.
   collisionSound: {fileID: 8300000, guid: 0881f2d78e506d844b03240b0088b76b, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!114 &871263449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3578,6 +3585,189 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &970234529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970234533}
+  - component: {fileID: 970234532}
+  - component: {fileID: 970234531}
+  - component: {fileID: 970234530}
+  m_Layer: 0
+  m_Name: open_book origin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &970234530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970234529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1396387938}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 5
+  m_TightenPosition: 0.5
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 5
+  m_TightenRotation: 0.5
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+--- !u!54 &970234531
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970234529}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &970234532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970234529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88ba18b15c2f334ca1fd70b289f6d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propName: Book
+  description: A book, it's titlted "Jurassic Coast Fossils" by Mary Anning.
+  collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
+  insideFetchZone: 0
+  outline: {fileID: 0}
+--- !u!4 &970234533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970234529}
+  m_LocalRotation: {x: -0, y: 0.91805935, z: -0, w: 0.39644295}
+  m_LocalPosition: {x: 0.655, y: 0.8776, z: 0.337}
+  m_LocalScale: {x: 3.1749928, y: 0.47176316, z: 1.7265666}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1758271828}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 133.288, z: 0}
 --- !u!1001 &1011527179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3739,6 +3929,7 @@ MonoBehaviour:
   description: A book, it's titled "Visit to Small Universe" by Virginia Trimble.
   collisionSound: {fileID: 8300000, guid: 0f00ca907e8ae464e8d2f79e524cb1ed, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!114 &1050052698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4497,7 +4688,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a52e228470754834a926e64540210b41,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.836
+      value: 1.0316
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a52e228470754834a926e64540210b41,
         type: 3}
@@ -4544,6 +4735,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dc719b4a608ff94cb1c42fbbd25a76d, type: 2}
+    - target: {fileID: 592664080621265513, guid: a52e228470754834a926e64540210b41,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592664080621265513, guid: a52e228470754834a926e64540210b41,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592664080621265513, guid: a52e228470754834a926e64540210b41,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a52e228470754834a926e64540210b41,
         type: 3}
       propertyPath: m_Name
@@ -4554,6 +4760,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dc719b4a608ff94cb1c42fbbd25a76d, type: 2}
+    - target: {fileID: 4518980002003577502, guid: a52e228470754834a926e64540210b41,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518980002003577502, guid: a52e228470754834a926e64540210b41,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518980002003577502, guid: a52e228470754834a926e64540210b41,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52e228470754834a926e64540210b41, type: 3}
 --- !u!1 &1092420646
@@ -4804,6 +5025,7 @@ MonoBehaviour:
   description: John Wick's favourite tool.
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!114 &1134021163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5045,47 +5267,62 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 970234533}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.721
+      value: -0.0009
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.833
+      value: -0.123
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.308
+      value: 0.0463
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.39644295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.91805935
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
@@ -5095,7 +5332,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 133.288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
         type: 3}
@@ -5660,6 +5897,7 @@ MonoBehaviour:
   description: A small rack filled with CCTs.
   collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!1001 &1378258019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6225,6 +6463,7 @@ MonoBehaviour:
   description: A book, it's titlted "radioactive substances" by Marie Curie.
   collisionSound: {fileID: 8300000, guid: 86ebff7a517934e4081f23fef2c398bd, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!1001 &1404626605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6673,6 +6912,7 @@ MonoBehaviour:
   description: A book, it's titled "To Space & Back" by Sally Ride.
   collisionSound: {fileID: 8300000, guid: 35360b215bbaa704088171a4164d808f, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!1 &1536106907
 GameObject:
   m_ObjectHideFlags: 0
@@ -6957,6 +7197,7 @@ MonoBehaviour:
     than any old hard drive for backups.
   collisionSound: {fileID: 8300000, guid: c9baa6a0c97e8964fa3acdca9002914e, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!1 &1588497305
 GameObject:
   m_ObjectHideFlags: 0
@@ -7422,6 +7663,7 @@ MonoBehaviour:
   description: A book, it's titled "Understanding Computers" by Grace Hopper.
   collisionSound: {fileID: 8300000, guid: 86ebff7a517934e4081f23fef2c398bd, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!1001 &1704328668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7429,6 +7671,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9024899519824874036, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05094
+      objectReference: {fileID: 0}
+    - target: {fileID: -9024899519824874036, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9024899519824874036, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
         type: 3}
       propertyPath: m_RootOrder
@@ -7452,17 +7709,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.52397025
+      value: -0.5837
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0149999
+      value: 1.0363
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.8391653
+      value: 0.8103
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
         type: 3}
@@ -7504,6 +7761,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bc0fd99c29c1d684396154a9ce802337, type: 2}
+    - target: {fileID: -2036410469228376182, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01722
+      objectReference: {fileID: 0}
+    - target: {fileID: -2036410469228376182, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2036410469228376182, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0005
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 934c8bc9429a06e4dbf8429ec1c2ee4e,
         type: 3}
       propertyPath: m_Name
@@ -7699,153 +7971,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1158858221}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1758271822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758271821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1396387938}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 1
-  m_SelectMode: 0
-  m_CustomReticle: {fileID: 0}
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_AttachTransform: {fileID: 0}
-  m_AttachEaseInTime: 0.15
-  m_MovementType: 2
-  m_VelocityDamping: 1
-  m_VelocityScale: 1
-  m_AngularVelocityDamping: 1
-  m_AngularVelocityScale: 1
-  m_TrackPosition: 1
-  m_SmoothPosition: 0
-  m_SmoothPositionAmount: 5
-  m_TightenPosition: 0.5
-  m_TrackRotation: 1
-  m_SmoothRotation: 0
-  m_SmoothRotationAmount: 5
-  m_TightenRotation: 0.5
-  m_ThrowOnDetach: 1
-  m_ThrowSmoothingDuration: 0.25
-  m_ThrowSmoothingCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
-  m_ThrowAngularVelocityScale: 1
-  m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
-  m_AttachPointCompatibilityMode: 0
---- !u!114 &1758271823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758271821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f88ba18b15c2f334ca1fd70b289f6d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  propName: Book
-  description: A book, it's titlted "Jurassic Coast Fossils" by Mary Anning.
-  collisionSound: {fileID: 8300000, guid: 0c67a4279a31e5940be8a18301e26619, type: 3}
-  insideFetchZone: 0
---- !u!54 &1758271824
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758271821}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &1758271825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7860,6 +7985,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: 5a2ec77fd6cd86940bddef4cb88b031e, type: 3}
+--- !u!4 &1758271828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a2ec77fd6cd86940bddef4cb88b031e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1158858221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1799017618
 GameObject:
   m_ObjectHideFlags: 0
@@ -8107,6 +8238,7 @@ MonoBehaviour:
   description: A spacepen made by Fisher. It looks really expensive.
   collisionSound: {fileID: 8300000, guid: c6d117a6cb87cc04ab0710779e027880, type: 3}
   insideFetchZone: 0
+  outline: {fileID: 0}
 --- !u!114 &1823541903
 MonoBehaviour:
   m_ObjectHideFlags: 0

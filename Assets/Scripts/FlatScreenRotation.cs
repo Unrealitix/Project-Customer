@@ -13,6 +13,8 @@ public class FlatScreenRotation : MonoBehaviour
 	[SerializeField] private float rotationSmoothTime = .12f;
 
 	[SerializeField] private float scrollSpeed = 0.1f;
+	[Range(1.0f, 3.0f)] [SerializeField] private float minPropDistFac = 1.0f;
+	[SerializeField] private float maxPropDist = 2f;
 
 	//Prop settings
 	[SerializeField] private float propRotationSpeed = 3.0f;
@@ -35,7 +37,8 @@ public class FlatScreenRotation : MonoBehaviour
 	private Rigidbody _heldPropRb;
 	private Prop _heldPropProp;
 	private float _heldPropStartAngularDrag;
-	private bool _isHoldingProp;
+	private float _heldPropMinDist;
+	private bool _isHoldingAProp;
 	private Prop _hoveredProp;
 
 	private void Start()
@@ -68,7 +71,7 @@ public class FlatScreenRotation : MonoBehaviour
 		transform.eulerAngles = _currentRotation;
 
 		//prop logic
-		if (!_isHoldingProp)
+		if (!_isHoldingAProp)
 		{
 			//if not holding a prop
 
@@ -94,7 +97,13 @@ public class FlatScreenRotation : MonoBehaviour
 			//if holding a prop
 
 			//on scroll, move the held prop target position closer or further away
-			if (Input.mouseScrollDelta.y != 0) heldPropLocation.localPosition += new Vector3(0, 0, Input.mouseScrollDelta.y * scrollSpeed);
+			if (Input.mouseScrollDelta.y != 0)
+			{
+				Vector3 pos = heldPropLocation.localPosition;
+				pos += new Vector3(0, 0, Input.mouseScrollDelta.y * scrollSpeed);
+				pos = new Vector3(pos.x, pos.y, Mathf.Clamp(pos.z, _heldPropMinDist, maxPropDist));
+				heldPropLocation.localPosition = pos;
+			}
 
 			//if a prop is held, move it to the heldPropLocation
 			_heldPropRb.MovePosition(heldPropLocation.position);
@@ -116,7 +125,10 @@ public class FlatScreenRotation : MonoBehaviour
 		//variable setup
 		_heldPropRb = hit.rigidbody;
 		_heldPropProp = prop;
-		_isHoldingProp = true;
+		_isHoldingAProp = true;
+
+		Bounds bounds = CalculateLocalBounds(prop.gameObject);
+		_heldPropMinDist = bounds.extents.magnitude * minPropDistFac;
 
 		//disable physics
 		_heldPropRb.useGravity = false;
@@ -146,7 +158,7 @@ public class FlatScreenRotation : MonoBehaviour
 		_heldPropProp.DestroyPanel();
 
 		//variable de-setup
-		_isHoldingProp = false;
+		_isHoldingAProp = false;
 		_heldPropRb = null;
 		_heldPropProp = null;
 	}
@@ -156,5 +168,21 @@ public class FlatScreenRotation : MonoBehaviour
 		List<XRDisplaySubsystem> xrDisplaySubsystems = new();
 		SubsystemManager.GetInstances(xrDisplaySubsystems);
 		return xrDisplaySubsystems.Any(xrDisplay => xrDisplay.running);
+	}
+
+	public static Bounds CalculateLocalBounds(GameObject go)
+	{
+		//From https://forum.unity.com/threads/calculating-a-bound-of-a-grouped-model.101121/
+		Transform t = go.transform;
+		Quaternion currentRotation = t.rotation;
+		t.rotation = Quaternion.Euler(0f, 0f, 0f);
+		MeshRenderer[] rr = go.GetComponentsInChildren<MeshRenderer>();
+		Bounds b = rr[0].bounds;
+		foreach (MeshRenderer r in rr) b.Encapsulate(r.bounds);
+
+		Vector3 localCenter = b.center - t.position;
+		b.center = localCenter;
+		go.transform.rotation = currentRotation;
+		return b;
 	}
 }
