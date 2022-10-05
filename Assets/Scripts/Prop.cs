@@ -27,6 +27,8 @@ public class Prop : MonoBehaviour
 
 	[HideInInspector] public bool insideFetchZone;
 
+	[HideInInspector] public Outline outline;
+
 	private void Start()
 	{
 		Transform t = transform;
@@ -50,6 +52,8 @@ public class Prop : MonoBehaviour
 		OnReset += Respawn;
 
 		_descriptionPanelPrefab = Resources.Load<GameObject>("Prop Description Panel");
+
+		if (!FlatScreenRotation.XRIsPresent()) outline = gameObject.AddComponent<Outline>();
 	}
 
 	private void OnCollisionEnter(Collision collision)
@@ -70,6 +74,16 @@ public class Prop : MonoBehaviour
 
 		if (other.CompareTag("Fetch Zone")) insideFetchZone = false;
 	}
+
+	// private void OnMouseEnter()
+	// {
+	// 	outline.Enable();
+	// }
+	//
+	// private void OnMouseExit()
+	// {
+	// 	outline.Disable();
+	// }
 
 	private void Respawn()
 	{

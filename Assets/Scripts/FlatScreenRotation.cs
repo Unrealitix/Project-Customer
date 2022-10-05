@@ -36,6 +36,7 @@ public class FlatScreenRotation : MonoBehaviour
 	private Prop _heldPropProp;
 	private float _heldPropStartAngularDrag;
 	private bool _isHoldingProp;
+	private Prop _hoveredProp;
 
 	private void Start()
 	{
@@ -71,13 +72,21 @@ public class FlatScreenRotation : MonoBehaviour
 		{
 			//if not holding a prop
 
+			if (!ReferenceEquals(_hoveredProp, null)) _hoveredProp.outline.Disable();
+
 			//look for an object in front of the player
 			if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
 			{
 				Prop prop = hit.transform.GetComponent<Prop>();
 				if (!prop) return;
+				_hoveredProp = prop;
+				_hoveredProp.outline.Enable();
 				//if the object is a prop, pick it up
-				if (Input.GetMouseButtonDown(0)) GrabProp(prop, hit);
+				if (Input.GetMouseButtonDown(0))
+				{
+					GrabProp(_hoveredProp, hit);
+					_hoveredProp.outline.Disable();
+				}
 			}
 		}
 		else
@@ -142,7 +151,7 @@ public class FlatScreenRotation : MonoBehaviour
 		_heldPropProp = null;
 	}
 
-	private static bool XRIsPresent()
+	public static bool XRIsPresent()
 	{
 		List<XRDisplaySubsystem> xrDisplaySubsystems = new();
 		SubsystemManager.GetInstances(xrDisplaySubsystems);
