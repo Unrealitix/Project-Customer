@@ -116,7 +116,7 @@ public class FlatScreenRotation : MonoBehaviour
 				_heldPropRb.transform.Rotate(transform.forward, Input.GetAxis("Q/E") * -propRotationSpeed, Space.World);
 
 			//if the player lets go of the prop, drop it
-			if (Input.GetMouseButtonUp(0)) ReleaseProp();
+			if (Input.GetMouseButtonDown(0)) ReleaseProp();
 		}
 	}
 
