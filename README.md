@@ -8,6 +8,10 @@ Science, Technology, Engineering, and Math, the four area’s of STEM. Currently
 
 [![Trailer Video](.github/readme-assets/youtube-thumb.png)](https://youtu.be/dKaG0gr40VM "Click to play")
 
+## Soundtrack
+
+Stream or buy the soundtrack of this game at [redotter.bandcamp.com/track/valerie-thomas](https://redotter.bandcamp.com/track/valerie-thomas)
+
 ## About this game
 
 ### She can VR
